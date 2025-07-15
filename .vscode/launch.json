@@ -1,0 +1,93 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - ShopLinker",
+        "order": 0
+      },
+      "projectName": "ShopLinker",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dshoplinker%%C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Data",
+      "presentation": {
+        "group": "Mod Development - ShopLinker",
+        "order": 1
+      },
+      "projectName": "ShopLinker",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\build\\moddev\\dataRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dshoplinker%%C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "GameTestServer",
+      "presentation": {
+        "group": "Mod Development - ShopLinker",
+        "order": 2
+      },
+      "projectName": "ShopLinker",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\build\\moddev\\gameTestServerRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\build\\moddev\\gameTestServerRunVmArgs.txt",
+        "-Dfml.modFolders\u003dshoplinker%%C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - ShopLinker",
+        "order": 3
+      },
+      "projectName": "ShopLinker",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dshoplinker%%C:\\Users\\Black\\Documents\\Codage\\Minecraft\\ShopLinker\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

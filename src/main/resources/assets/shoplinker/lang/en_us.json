@@ -1,0 +1,13 @@
+{
+  "itemGroup.shoplinker": "Example Mod Tab",
+  "block.shoplinker.example_block": "Example Block",
+  "item.shoplinker.example_item": "Example Item",
+
+  "shoplinker.configuration.title": "ShopLinker Configs",
+  "shoplinker.configuration.section.shoplinker.common.toml": "ShopLinker Configs",
+  "shoplinker.configuration.section.shoplinker.common.toml.title": "ShopLinker Configs",
+  "shoplinker.configuration.items": "Item List",
+  "shoplinker.configuration.logDirtBlock": "Log Dirt Block",
+  "shoplinker.configuration.magicNumberIntroduction": "Magic Number Text",
+  "shoplinker.configuration.magicNumber": "Magic Number"
+}
