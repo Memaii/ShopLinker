@@ -19,6 +19,7 @@ import java.util.UUID; // Imports UUID for unique player identification.
 
 import com.mojang.logging.LogUtils; // Imports LogUtils for logging utilities.
 import org.slf4j.Logger; // Imports Logger for logging messages.
+import net.minecraft.ChatFormatting; // Imports ChatFormatting for chat colors.
 
 /**
  * This class handles the registration and execution of in-game shop commands.
@@ -88,6 +89,12 @@ public class ShopCommands {
                                 .executes(context -> modifyShop(context, "url")) // Calls modifyShop for URL modification.
                             )
                         )
+                    )
+                )
+                // NEW Subcommand: /shop info <name>
+                .then(Commands.literal("info")
+                    .then(Commands.argument("name", StringArgumentType.string())
+                        .executes(ShopCommands::shopInfo) // Execute shopInfo method
                     )
                 )
         );
@@ -292,5 +299,44 @@ public class ShopCommands {
         }
 
         return 1; // Indicate success or that an attempt was made.
+    }
+
+    /**
+     * Executes the "/shop info" command. It displays detailed information about a specific shop.
+     * The owner UUID is only displayed to players with a permission level of 2 (OP) or higher.
+     *
+     * @param context The command context.
+     * @return 1 if shop information is displayed successfully, 0 otherwise.
+     */
+    private static int shopInfo(CommandContext<CommandSourceStack> context) {
+        CommandSourceStack source = context.getSource();
+        String name = StringArgumentType.getString(context, "name");
+
+        Optional<ShopEntry> shopOpt = ShopLinker.shopManager.getShopByName(name);
+
+        if (shopOpt.isPresent()) {
+            ShopEntry shop = shopOpt.get();
+            source.sendSuccess(() -> Component.translatable("commands.shoplinker.info.header", shop.getName()).withStyle(ChatFormatting.GOLD), false);
+            source.sendSuccess(() -> Component.translatable("commands.shoplinker.info.description", shop.getDescription()).withStyle(ChatFormatting.WHITE), false);
+            if (!shop.getUrl().isEmpty()) {
+                source.sendSuccess(() -> Component.translatable("commands.shoplinker.info.url", shop.getUrl())
+                        .withStyle(Style.EMPTY
+                            .withColor(ChatFormatting.AQUA)
+                            .withUnderlined(true)
+                            .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, shop.getUrl()))
+                        ), false);
+            } else {
+                source.sendSuccess(() -> Component.translatable("commands.shoplinker.info.no_url").withStyle(ChatFormatting.GRAY), false);
+            }
+
+            // Only send owner UUID if the player has permission level 2 or higher
+            if (source.hasPermission(2)) {
+                source.sendSuccess(() -> Component.translatable("commands.shoplinker.info.owner", shop.getOwnerUUID().toString()).withStyle(ChatFormatting.GRAY), false);
+            }
+
+        } else {
+            source.sendFailure(Component.translatable("commands.shoplinker.info.not_found", name));
+        }
+        return 1;
     }
 }

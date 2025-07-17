@@ -12,5 +12,12 @@
   "commands.shoplinker.modify.not_found": "§cBoutique '%s' introuvable pour la modification.",
   "commands.shoplinker.modify.success": "§aBoutique '%s' modifiée : '%s' mis à jour en '%s'.",
   "commands.shoplinker.modify.name_exists": "§cLe nouveau nom '%s' est déjà pris par une autre boutique.",
-  "commands.shoplinker.list.no_link": "§7(Pas de lien)"
+  "commands.shoplinker.list.no_link": "§7(Aucun Lien)",
+  "commands.shoplinker.list.link": "Visiter le Lien",
+  "commands.shoplinker.info.header": "§e--- Infos Boutique: %s ---",
+  "commands.shoplinker.info.description": "Description: §f%s",
+  "commands.shoplinker.info.url": "URL: §b%s",
+  "commands.shoplinker.info.no_url": "URL: §7(Aucune fournie)",
+  "commands.shoplinker.info.owner": "UUID Propriétaire: §7%s",
+  "commands.shoplinker.info.not_found": "§cBoutique '%s' introuvable."
 }
