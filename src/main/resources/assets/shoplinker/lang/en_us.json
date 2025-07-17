@@ -1,13 +1,16 @@
 {
-  "itemGroup.shoplinker": "Example Mod Tab",
-  "block.shoplinker.example_block": "Example Block",
-  "item.shoplinker.example_item": "Example Item",
-
-  "shoplinker.configuration.title": "ShopLinker Configs",
-  "shoplinker.configuration.section.shoplinker.common.toml": "ShopLinker Configs",
-  "shoplinker.configuration.section.shoplinker.common.toml.title": "ShopLinker Configs",
-  "shoplinker.configuration.items": "Item List",
-  "shoplinker.configuration.logDirtBlock": "Log Dirt Block",
-  "shoplinker.configuration.magicNumberIntroduction": "Magic Number Text",
-  "shoplinker.configuration.magicNumber": "Magic Number"
+  "commands.shoplinker.generic.no_shops": "§eThere are currently no registered shops.",
+  "commands.shoplinker.list.title": "§aList of shops:",
+  "commands.shoplinker.add.success": "§aShop '%s' added successfully!",
+  "commands.shoplinker.add.exists": "§cShop '%s' already exists.",
+  "commands.shoplinker.add.invalid_url": "§cThe URL must start with 'http://' or 'https://' if provided.",
+  "commands.shoplinker.remove.success": "§aShop '%s' removed successfully!",
+  "commands.shoplinker.remove.not_found": "§cShop '%s' not found.",
+  "commands.shoplinker.remove.permission": "§cYou do not have permission to remove this shop.",
+  "commands.shoplinker.generic.no_permission": "§cYou do not have permission to perform this action.",
+  "commands.shoplinker.generic.error": "§cAn error occurred.",
+  "commands.shoplinker.modify.not_found": "§cShop '%s' not found for modification.",
+  "commands.shoplinker.modify.success": "§aShop '%s' modified: '%s' updated to '%s'.",
+  "commands.shoplinker.modify.name_exists": "§cNew name '%s' is already taken by another shop.",
+  "commands.shoplinker.list.no_link": "§7(No Link)"
 }

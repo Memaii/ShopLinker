@@ -1,6 +1,6 @@
 package com.example.shoplinker;
 
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.Minecraft; // Gardé si vous utilisez Minecraft.getInstance() pour des infos client
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -10,22 +10,23 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-// This class will not load on dedicated servers. Accessing client side code from here is safe.
+import com.mojang.logging.LogUtils;
+import org.slf4j.Logger;
+
 @Mod(value = ShopLinker.MODID, dist = Dist.CLIENT)
-// You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
 @EventBusSubscriber(modid = ShopLinker.MODID, value = Dist.CLIENT)
 public class ShopLinkerClient {
+    private static final Logger LOGGER = LogUtils.getLogger();
+
     public ShopLinkerClient(ModContainer container) {
-        // Allows NeoForge to create a config screen for this mod's configs.
-        // The config screen is accessed by going to the Mods screen > clicking on your mod > clicking on config.
-        // Do not forget to add translations for your config options to the en_us.json file.
+        // Enregistre l'écran de configuration du mod (même si la config est vide pour l'instant)
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
-        // Some client setup code
-        ShopLinker.LOGGER.info("HELLO FROM CLIENT SETUP");
-        ShopLinker.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        LOGGER.info("ShopLinker client setup complete."); 
+        // Ligne d'exemple supprimée ou commentée, gardant un log simple pour la confirmation
+        // LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName()); 
     }
 }

@@ -1,0 +1,16 @@
+{
+  "commands.shoplinker.generic.no_shops": "§eIl n'y a actuellement aucune boutique enregistrée.",
+  "commands.shoplinker.list.title": "§aListe des boutiques:",
+  "commands.shoplinker.add.success": "§aBoutique '%s' ajoutée avec succès !",
+  "commands.shoplinker.add.exists": "§cBoutique '%s' existe déjà.",
+  "commands.shoplinker.add.invalid_url": "§cL'URL doit commencer par 'http://' ou 'https://' si fournie.",
+  "commands.shoplinker.remove.success": "§aBoutique '%s' supprimée avec succès !",
+  "commands.shoplinker.remove.not_found": "§cBoutique '%s' introuvable.",
+  "commands.shoplinker.remove.permission": "§cVous n'avez pas la permission de supprimer cette boutique.",
+  "commands.shoplinker.generic.no_permission": "§cVous n'avez pas la permission d'effectuer cette action.",
+  "commands.shoplinker.generic.error": "§cUne erreur s'est produite.",
+  "commands.shoplinker.modify.not_found": "§cBoutique '%s' introuvable pour la modification.",
+  "commands.shoplinker.modify.success": "§aBoutique '%s' modifiée : '%s' mis à jour en '%s'.",
+  "commands.shoplinker.modify.name_exists": "§cLe nouveau nom '%s' est déjà pris par une autre boutique.",
+  "commands.shoplinker.list.no_link": "§7(Pas de lien)"
+}
