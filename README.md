@@ -53,7 +53,7 @@ The base command is `/shop`, available to all players.
 
 | Subcommand                                      | Description                                 | Permission                  |
 |-------------------------------------------------|---------------------------------------------|-----------------------------|
-| `/shop add <name> <description> [url]`          | Adds a new shop.                            | Level 2 (Operator/Owner)    |
+| `/shop add <name> <description> [url]`          | Adds a new shop.                            | Level 0 (Everyone)    |
 | `/shop remove <name>`                           | Removes an existing shop.                   | Level 2 or shop owner       |
 | `/shop modify <name> <field> <newValue>`        | Modifies shop details (`description`, `url`, `name`). | Level 2 or shop owner       |
 | `/shop list`                                    | Lists all registered shops.                 | Level 0 (Everyone)          |

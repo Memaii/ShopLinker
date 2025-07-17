@@ -1,6 +1,8 @@
 {
   "commands.shoplinker.generic.no_shops": "§eIl n'y a actuellement aucune boutique enregistrée.",
   "commands.shoplinker.list.title": "§aListe des boutiques:",
+  "commands.shoplinker.list.link": "§bCliquer pour visiter le lien",
+  "commands.shoplinker.list.no_link": "§7(Pas de lien)",
   "commands.shoplinker.add.success": "§aBoutique '%s' ajoutée avec succès !",
   "commands.shoplinker.add.exists": "§cBoutique '%s' existe déjà.",
   "commands.shoplinker.add.invalid_url": "§cL'URL doit commencer par 'http://' ou 'https://' si fournie.",
@@ -12,12 +14,13 @@
   "commands.shoplinker.modify.not_found": "§cBoutique '%s' introuvable pour la modification.",
   "commands.shoplinker.modify.success": "§aBoutique '%s' modifiée : '%s' mis à jour en '%s'.",
   "commands.shoplinker.modify.name_exists": "§cLe nouveau nom '%s' est déjà pris par une autre boutique.",
-  "commands.shoplinker.list.no_link": "§7(Aucun Lien)",
-  "commands.shoplinker.list.link": "Visiter le Lien",
-  "commands.shoplinker.info.header": "§e--- Infos Boutique: %s ---",
-  "commands.shoplinker.info.description": "Description: §f%s",
-  "commands.shoplinker.info.url": "URL: §b%s",
-  "commands.shoplinker.info.no_url": "URL: §7(Aucune fournie)",
-  "commands.shoplinker.info.owner": "UUID Propriétaire: §7%s",
-  "commands.shoplinker.info.not_found": "§cBoutique '%s' introuvable."
+  "commands.shoplinker.info.header": "§a--- Infos Boutique : %s ---",
+  "commands.shoplinker.info.description": "§fDescription : %s",
+  "commands.shoplinker.info.url": "§bURL : %s",
+  "commands.shoplinker.info.no_url": "§7Pas d'URL fournie.",
+  "commands.shoplinker.info.owner": "§7UUID du propriétaire : %s",
+  "commands.shoplinker.info.not_found": "§cBoutique '%s' introuvable.",
+  "commands.shoplinker.field.name": "nom",
+  "commands.shoplinker.field.description": "description",
+  "commands.shoplinker.field.url": "URL"
 }

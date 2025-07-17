@@ -4,13 +4,8 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-// Core Minecraft/NeoForge imports
-import net.minecraft.core.registries.BuiltInRegistries; // Kept for potential future use (e.g., getting existing item IDs)
-import net.minecraft.core.registries.Registries; // Kept for potential future use for registries
-import net.minecraft.network.chat.Component; // Kept for chat messages (commands)
 
 // NeoForge mod event imports
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;

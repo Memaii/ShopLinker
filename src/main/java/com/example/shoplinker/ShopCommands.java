@@ -17,8 +17,6 @@ import java.util.List; // Imports List for handling collections of shop entries.
 import java.util.Optional; // Imports Optional for handling nullable shop entries.
 import java.util.UUID; // Imports UUID for unique player identification.
 
-import com.mojang.logging.LogUtils; // Imports LogUtils for logging utilities.
-import org.slf4j.Logger; // Imports Logger for logging messages.
 import net.minecraft.ChatFormatting; // Imports ChatFormatting for chat colors.
 
 /**
@@ -26,10 +24,6 @@ import net.minecraft.ChatFormatting; // Imports ChatFormatting for chat colors.
  * It uses the Brigadier command library for command parsing and execution.
  */
 public class ShopCommands {
-
-    // Logger for logging messages and debugging information.
-    private static final Logger LOGGER = LogUtils.getLogger();
-
     /**
      * This method registers all the shop-related commands when the RegisterCommandsEvent is fired.
      * It sets up the command structure, including subcommands, arguments, and permission checks.
@@ -132,7 +126,7 @@ public class ShopCommands {
             // Check if the URL is not empty and starts with http:// or https:// to make it clickable.
             if (!shopUrl.isEmpty() && (shopUrl.startsWith("http://") || shopUrl.startsWith("https://"))) {
                 // Create a clickable URL component.
-                MutableComponent urlComponent = Component.literal("§9[Lien]") // Display "[Link]".
+                MutableComponent urlComponent = Component.literal("§9[Link]") // Display "[Link]".
                     .withStyle(Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, shopUrl)) // Set click event to open URL.
                         .withUnderlined(true)); // Underline the text.
                 source.sendSuccess(() -> shopComponent.append(urlComponent), false); // Append and send the shop component with the link.
@@ -165,11 +159,6 @@ public class ShopCommands {
             // URL not provided, shopUrl remains empty, which is handled later.
         }
 
-        // Debug logging for URL validation.
-        LOGGER.info("Debug: URL received: '{}'", shopUrl);
-        LOGGER.info("Debug: URL is empty: {}", shopUrl.isEmpty());
-        LOGGER.info("Debug: URL starts with http:// : {}", shopUrl.startsWith("http://"));
-        LOGGER.info("Debug: URL starts with https:// : {}", shopUrl.startsWith("https://"));
 
         // Validate the URL format if it's not empty.
         if (!shopUrl.isEmpty() && !(shopUrl.startsWith("http://") || shopUrl.startsWith("https://"))) {

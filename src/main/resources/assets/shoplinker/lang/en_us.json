@@ -1,6 +1,8 @@
 {
   "commands.shoplinker.generic.no_shops": "§eThere are currently no registered shops.",
   "commands.shoplinker.list.title": "§aList of shops:",
+  "commands.shoplinker.list.link": "§bClick to Visit Link",
+  "commands.shoplinker.list.no_link": "§7(No Link)",
   "commands.shoplinker.add.success": "§aShop '%s' added successfully!",
   "commands.shoplinker.add.exists": "§cShop '%s' already exists.",
   "commands.shoplinker.add.invalid_url": "§cThe URL must start with 'http://' or 'https://' if provided.",
@@ -12,12 +14,13 @@
   "commands.shoplinker.modify.not_found": "§cShop '%s' not found for modification.",
   "commands.shoplinker.modify.success": "§aShop '%s' modified: '%s' updated to '%s'.",
   "commands.shoplinker.modify.name_exists": "§cNew name '%s' is already taken by another shop.",
-  "commands.shoplinker.list.no_link": "§7(No Link)",
-  "commands.shoplinker.list.link": "Visit Link",
-  "commands.shoplinker.info.header": "§e--- Shop Info: %s ---",
-  "commands.shoplinker.info.description": "Description: §f%s",
-  "commands.shoplinker.info.url": "URL: §b%s",
-  "commands.shoplinker.info.no_url": "URL: §7(None provided)",
-  "commands.shoplinker.info.owner": "Owner UUID: §7%s",
-  "commands.shoplinker.info.not_found": "§cShop '%s' not found."
+  "commands.shoplinker.info.header": "§a--- Shop Info: %s ---",
+  "commands.shoplinker.info.description": "§fDescription: %s",
+  "commands.shoplinker.info.url": "§bURL: %s",
+  "commands.shoplinker.info.no_url": "§7No URL provided.",
+  "commands.shoplinker.info.owner": "§7Owner UUID: %s",
+  "commands.shoplinker.info.not_found": "§cShop '%s' not found.",
+  "commands.shoplinker.field.name": "name",
+  "commands.shoplinker.field.description": "description",
+  "commands.shoplinker.field.url": "URL"
 }
