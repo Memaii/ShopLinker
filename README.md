@@ -35,7 +35,7 @@
    Ensure you have the correct version of NeoForge installed on both your client and server.
 
 2. **Download ShopLinker**  
-   Get the latest `.jar` file from the [releases page](https://github.com/YourGitHubUser/ShopLinker/releases) *(or build it yourself – see below)*.
+   Get the latest `.jar` file from the [releases page](https://github.com/Memaii/ShopLinker/releases) *(or build it yourself – see below)*.
 
 3. **Install on Client**  
    Place the `.jar` file in your `mods/` folder of your Minecraft client.
@@ -91,7 +91,7 @@ Shop data is saved to a file named `shoplinker_shops.json`, located in your worl
 If you want to build ShopLinker manually:
 
 ```bash
-git clone https://github.com/YourGitHubUser/ShopLinker.git
+git clone https://github.com/Memaii/ShopLinker.git
 cd ShopLinker
 ./gradlew build
 ```
